@@ -5,6 +5,7 @@ The main script usage is as follows "python3 find_synteny.py -s Input_order_orth
 
 -s sorted orthologs file 
 -o name of the output file
+**FileModeling.py and cluster_syntheny.py must be in the same folder to run**
 
 -----INPUT-----
 The sorted orthologs file must have the following format:
