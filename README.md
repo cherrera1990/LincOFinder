@@ -7,7 +7,7 @@ The main script usage is as follows **python3 find_synteny.py -s Input_order_ort
 -o name of the output file  
 **FileModeling.py and cluster_syntheny.py must be in the same folder to run**  
 
------INPUT-----  
+**-----INPUT-----**  
 The sorted orthologs file must have the following format:  
 Ref_GeneID  Cluster1(Int_GeneID|virtual_coordinate|Chromosome|strand) Cluster2  Cluster3...ClusterN for coding genes  
 Ref_GeneID "Hypnc_"Name_of_the_lincRNA for lincRNAs  
@@ -23,7 +23,7 @@ BL01409	ENSG00000105996|145|7|-	ENSG00000173917|780|17|-
   
 Chromosomes must be numbers, we advise to change chromosome X to "0" and Y to "1000".  
   
-----OUTPUT----  
+**----OUTPUT----**  
 The output must be read as follows:  
   
 lincRNA (number of genes in the best cluster) >"standard deviation of the distance between the further genes" <"standard deviation of the distance between the closer genes"  #BEST CLUSTER ->Int_GeneID_1,virtual_coordinate_1,Chromosome_1,Ref_GeneID_1 Int_GeneID_2,virtual_coordinate_2,Chromosome_2,Ref_GeneID_2 Int_GeneID_N,virtual_coordinate_N,Chromosome_N,Ref_GeneID_N  
