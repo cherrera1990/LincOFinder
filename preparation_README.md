@@ -1,5 +1,5 @@
 The preparation_input_tool.pl usage is the following:  
-**perl preparation_input_tool.pl file_orthologies file_ref_species file_int_species output**  
+**perl preparation_input_tool.pl file_orthologies file_int_species file_ref_species output**  
 file_orthologies: A file including all the orthology relathionships between the two species  
 file_ref_species: A file including the coding and lincRNA genes for the Reference species ordered  
 file_int_species: A file including the coding genes for the Interrogated species ordered  
