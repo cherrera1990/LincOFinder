@@ -3,7 +3,7 @@
 #open the files
 $num_args = $#ARGV + 1;
 if ($num_args != 4) {
-    print "\nUsage: preparation_input_tool.pl file_orthologies file_ref_species file_int_species output\n";
+    print "\nUsage: preparation_input_tool.pl file_orthologies file_int_species file_ref_species output\n";
     exit;
 }
 $orthofile=$ARGV[0];
