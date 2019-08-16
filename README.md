@@ -1,7 +1,7 @@
 # LincOFinder  
 LincOFinder is a program designed to identify shared microsyntenic clusters surrounding lincRNAs between two species. 
 
-The main script usage is as follows "python3 find_synteny.py -s Input_order_orthologies.txt -o Output.out  
+The main script usage is as follows **python3 find_synteny.py -s Input_order_orthologies.txt -o Output.out**  
 
 -s sorted orthologs file  
 -o name of the output file  
