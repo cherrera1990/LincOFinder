@@ -83,3 +83,4 @@ while(<IN3>){
     print OUT1 "\n";
     
 }
+close OUT1;
