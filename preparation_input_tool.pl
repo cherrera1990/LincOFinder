@@ -9,11 +9,11 @@ if ($num_args != 4) {
 $orthofile=$ARGV[0];
 $intfile=$ARGV[1];
 $reffile=$ARGV[2];
-$outfile=$ARGV[0];
-open(IN1, "$orthofile") or die 'Fail in Orthology file';
-open(IN2, "$intfile") or die 'Fail in Int Species file';
-open(IN3, "$reffile") or die 'Fail in Ref Species file';
-open(OUT1, '>',"$outfile") or die 'Could not create output file';
+$outfile=$ARGV[3];
+open(IN1, $orthofile) or die 'Fail in Orthology file';
+open(IN2, $intfile) or die 'Fail in Int Species file';
+open(IN3, $reffile) or die 'Fail in Ref Species file';
+open(OUT1, '>',$outfile) or die 'Could not create output file';
 $i=0;
 $familiy=0;
 
