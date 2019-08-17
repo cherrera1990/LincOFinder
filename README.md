@@ -33,8 +33,8 @@ lincRNA (number of genes in the best cluster) >"standard deviation of the distan
 An example of the output:  
 Hypnc_BL48403	(2)	>0.7	<0.7	#ENSG00000106443,Pos:83,Strand:+,Chr:7,BL:BL05756  	  ENSG00000189043,Pos:82,Strand:-,Chr:7,BL:BL11653  
 
- 	ENSG00000106443,Pos:83,Strand:+,Chr:7,BL:BL05756	ENSG00000189043,Pos:82,Strand:-,Chr:7,BL:BL11653	
-	ENSG00000185633,Pos:579,Strand:-,Chr:12,BL:BL11653	ENSG00000139372,Pos:786,Strand:+,Chr:12,BL:BL24944	
+ ENSG00000106443,Pos:83,Strand:+,Chr:7,BL:BL05756	ENSG00000189043,Pos:82,Strand:-,Chr:7,BL:BL11653	
+ ENSG00000185633,Pos:579,Strand:-,Chr:12,BL:BL11653	ENSG00000139372,Pos:786,Strand:+,Chr:12,BL:BL24944	
 
 
 
