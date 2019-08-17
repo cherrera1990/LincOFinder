@@ -1,6 +1,14 @@
 # LincOFinder  
 LincOFinder is a program designed to identify shared microsyntenic clusters surrounding lincRNAs between two species. 
 
+**Introduction**  
+Lon-Non coding RNAs (lnc-RNAs) take part in a wide range of cellular and developmental processes. Unfortunately, week sequence conservation of lnc-RNAs between two species makes comparisons by sequence homology difficult. This program aims to find lnc-RNAs that are conserved by their surrounding protein coding genes between two species. This conservation of a genomic neighborhood is called “synteny”.  
+  
+**lincOfinder**  
+In a first step, an ordered gene file (see input section) has to be generate, where every gene of species A is sorted by its genomic position. A second column lists the corresponding orthologs of species B identified by BLAST (it may be useful to limit the number of orthologs based on E-values). Thus, each line contains a gene of species A and its corresponding, potential orthologs of species B, sorted by the coordinates of species B.  
+  
+In a first step of finding synteny, lincOfinder searches for linc-RNAs in the ordered gene file. Since synteny involves genes in close vicinity, lincOfinder then takes 3 genes upstream and 3 genes downstream of a linc-RNA in species A, together with all the orthologs of species B. Finally, a UPGMA clustering on the genomic positions is performed to find combinations of orthologs that are close together. In the best case, one would find a cluster of species B genes, where all the genes are their direct genomic neighbors. Given the fact, that the clustering was performed on species B gene positions but the selection of genes was based on the 6 lnc-RNA surrounding genes of species A, such a cluster could suggest synteny. In case there are multiple clusters, which are equal in their distance, lincOfinder reports the best cluster as the one with the orthologs closest to the lnc-RNA. LincOfinder additionally reports the standard deviation of the best cluster. This is not related to the clustering process, but facilitates to assess cluster distances by eye. Furthermore, all other possible clusters are part of the output.  
+  
 The main script usage is as follows **python3 find_synteny.py -s Input_order_orthologies.txt -o Output.out**  
 
 -s sorted orthologs file  
@@ -9,7 +17,7 @@ The main script usage is as follows **python3 find_synteny.py -s Input_order_ort
 
 **-----INPUT-----**  
 The sorted orthologs file must have the following format:  
-Ref_GeneID  Cluster1(Int_GeneID|virtual_coordinate|Chromosome|strand) Cluster2  Cluster3...ClusterN for coding genes  
+Ref_GeneID  Ortholog1(Int_GeneID|virtual_coordinate|Chromosome|strand) Ortholog2  Ortholog3...OrthologN for coding genes  
 Ref_GeneID "Hypnc_"Name_of_the_lincRNA for lincRNAs  
 
 As in the following example:  
@@ -26,7 +34,7 @@ Chromosomes must be numbers, we advise to change chromosome X to "0" and Y to "1
 **----OUTPUT----**  
 The output must be read as follows:  
   
-lincRNA (number of genes in the best cluster) >"standard deviation of the distance between the further genes" <"standard deviation of the distance between the closer genes"  #BEST CLUSTER ->Int_GeneID_1,virtual_coordinate_1,Chromosome_1,Ref_GeneID_1 Int_GeneID_2,virtual_coordinate_2,Chromosome_2,Ref_GeneID_2 Int_GeneID_N,virtual_coordinate_N,Chromosome_N,Ref_GeneID_N  
+lincRNA (number of genes in the best cluster) >"standard deviation of distance of all genes" <"standard deviation of distance of closest genes"  #BEST CLUSTER ->Int_GeneID_1,virtual_coordinate_1,Chromosome_1,Ref_GeneID_1 Int_GeneID_2,virtual_coordinate_2,Chromosome_2,Ref_GeneID_2 Int_GeneID_N,virtual_coordinate_N,Chromosome_N,Ref_GeneID_N  
   
   Other possible clusters (one line for cluster)  
   
