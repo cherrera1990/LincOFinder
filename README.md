@@ -47,3 +47,17 @@ Hypnc_BL48403	(2)	>0.7	<0.7	#ENSG00000106443,Pos:83,Strand:+,Chr:7,BL:BL05756  	
 
 
 A perl script is also included to help generating the INPUT file, usage available in preparation_README.md
+  
+**Required packages**  
+  
+- python 3.4 or higher  
+- operator  
+- abc  
+- pickle  
+- optparse  
+- itertools  
+- collections  
+- Bio.Phylo.TreeConstruction  
+- numpy  
+- statistics  
+  
