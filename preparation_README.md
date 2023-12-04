@@ -34,7 +34,8 @@ For more info see example below:
 **-file_ref_species**  
 Format must be a comma separated file with:  
 Chromosome,start,end,GeneID,TranscriptID,strand,class  
-Ordered by start possition for every chromosome  
+Ordered by start possition for every chromosome
+Must be collapsed to the canonical isoform for each gene (or the longest isoform if no other info is available)
 For more info see example below:  
 Sc0000000,372950,374384,BL73495,BL73495_cuf0,+,coding  
 Sc0000000,543362,545073,BL60128,BL60128_cuf0,+,linc  
